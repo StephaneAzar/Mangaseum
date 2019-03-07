@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>SHOJO</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Mangaka</th>
+      <th>Year</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shojos.each do |shojo| %>
+      <tr>
+        <td><%= shojo.title %></td>
+        <td><%= shojo.genre %></td>
+        <td><%= shojo.mangaka %></td>
+        <td><%= shojo.year %></td>
+        <td><%= shojo.description %></td>
+        <td><%= image_tag shojo.image_url, class: 'img-fluid' %></td>
+        <td><%= link_to 'Show', shojo %></td>
+        <td><%= link_to 'Edit', edit_shojo_path(shojo) %></td>
+        <td><%= link_to 'Destroy', shojo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shojo', new_shojo_path %>

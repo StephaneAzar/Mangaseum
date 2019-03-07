@@ -1,0 +1,2 @@
+class Shojo < ApplicationRecord
+end

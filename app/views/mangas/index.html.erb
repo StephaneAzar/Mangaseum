@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Mangas</h1>
+<h1>SHONEN</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -23,7 +23,7 @@
         <td><%= manga.mangaka %></td>
         <td><%= manga.year %></td>
         <td><%= manga.description %></td>
-        <td><%= manga.image_url %></td>
+        <td><%= image_tag manga.image_url, class: 'img-fluid' %></td>
         <td><%= link_to 'Show', manga %></td>
         <td><%= link_to 'Edit', edit_manga_path(manga) %></td>
         <td><%= link_to 'Destroy', manga, method: :delete, data: { confirm: 'Are you sure?' } %></td>

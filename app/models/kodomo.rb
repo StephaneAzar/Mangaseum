@@ -1,0 +1,2 @@
+class Kodomo < ApplicationRecord
+end

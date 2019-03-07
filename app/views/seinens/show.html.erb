@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @seinen.title %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @seinen.genre %>
+</p>
+
+<p>
+  <strong>Mangaka:</strong>
+  <%= @seinen.mangaka %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @seinen.year %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @seinen.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @seinen.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_seinen_path(@seinen) %> |
+<%= link_to 'Back', seinens_path %>

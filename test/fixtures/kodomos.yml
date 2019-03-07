@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  genre: MyString
+  mangaka: MyString
+  year: 1
+  description: MyString
+  image_url: MyString
+
+two:
+  title: MyString
+  genre: MyString
+  mangaka: MyString
+  year: 1
+  description: MyString
+  image_url: MyString

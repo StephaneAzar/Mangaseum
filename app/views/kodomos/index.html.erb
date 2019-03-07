@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>KODOMOS</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Mangaka</th>
+      <th>Year</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kodomos.each do |kodomo| %>
+      <tr>
+        <td><%= kodomo.title %></td>
+        <td><%= kodomo.genre %></td>
+        <td><%= kodomo.mangaka %></td>
+        <td><%= kodomo.year %></td>
+        <td><%= kodomo.description %></td>
+        <td><%= image_tag kodomo.image_url, class: "img-fluid" %></td>
+        <td><%= link_to 'Show', kodomo %></td>
+        <td><%= link_to 'Edit', edit_kodomo_path(kodomo) %></td>
+        <td><%= link_to 'Destroy', kodomo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kodomo', new_kodomo_path %>

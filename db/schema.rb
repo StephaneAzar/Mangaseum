@@ -10,12 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_06_151849) do
+ActiveRecord::Schema.define(version: 2019_03_07_140827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "kodomos", force: :cascade do |t|
+    t.string "title"
+    t.string "genre"
+    t.string "mangaka"
+    t.integer "year"
+    t.string "description"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "mangas", force: :cascade do |t|
+    t.string "title"
+    t.string "genre"
+    t.string "mangaka"
+    t.integer "year"
+    t.string "description"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "seinens", force: :cascade do |t|
+    t.string "title"
+    t.string "genre"
+    t.string "mangaka"
+    t.integer "year"
+    t.string "description"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shojos", force: :cascade do |t|
     t.string "title"
     t.string "genre"
     t.string "mangaka"
