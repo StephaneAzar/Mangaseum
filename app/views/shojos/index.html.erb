@@ -10,7 +10,7 @@
       <th>Mangaka</th>
       <th>Year</th>
       <th>Description</th>
-      <th>Image url</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,9 +24,9 @@
         <td><%= shojo.year %></td>
         <td><%= shojo.description %></td>
         <td><%= image_tag shojo.image_url, class: 'img-fluid' %></td>
-        <td><%= link_to 'Show', shojo %></td>
-        <td><%= link_to 'Edit', edit_shojo_path(shojo) %></td>
-        <td><%= link_to 'Destroy', shojo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="show"><%= link_to 'Show', shojo %></td>
+        <td class="edit"><%= link_to 'Edit', edit_shojo_path(shojo) %></td>
+        <td class="destroy"><%= link_to 'Destroy', shojo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

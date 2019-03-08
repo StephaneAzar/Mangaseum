@@ -5,7 +5,29 @@
 		<meta charset= "utf-8">
 
 	</head>
-		<body>
-			<h1 style="text-align:center;">MANGASEUM</h1>
+		<body style="display:flex;flex-direction:column;">
+			<h1 style="margin:auto;" >MANGASEUM</h1>
+
+
+<div style="margin:auto;  margin-top:30vh;">
+		<button class="Shonen"
+        type="button">
+		<%= link_to 'Shonen', mangas_path %>
+		</button>
+		<button class="Shojo"
+        type="button">
+		<%= link_to 'Shojo', shojos_path %>
+		</button>
+		
+		<button class="Kodomo"
+        type="button">
+		<%= link_to 'Kodomo', kodomos_path %>
+		</button>
+		<button class="Seinen"
+        type="button">
+		<%= link_to 'Seinen', seinens_path %>
+		</button>
+</div>		
+
 		</body>
 </html>
